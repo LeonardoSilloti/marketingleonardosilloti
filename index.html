@@ -20,11 +20,14 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         header p {
             margin: 5px 0 0;
-            font-size: 1.2em;
+            font-size: 1.5em;
+            font-weight: bold;
         }
         .cta-button {
             display: inline-block;
@@ -35,6 +38,7 @@
             text-transform: uppercase;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2em;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
@@ -48,30 +52,74 @@
         .features h2, .testimonials h2, .pricing h2, .cta h2 {
             color: #2ecc71;
             margin-bottom: 20px;
+            font-size: 2em;
         }
         .features .feature-item {
             margin: 20px 0;
         }
         .feature-image {
-            max-width: 100%;
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 10px;
+            margin: 10px auto;
         }
         .testimonials .testimonial {
             margin: 20px 0;
             font-style: italic;
+            font-size: 1.2em;
+        }
+        .video {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .video iframe {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+        .pricing {
+            background-color: #eafaf1;
+            border: 2px solid #27ae60;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .discount {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.2em;
+            margin-right: 10px;
         }
         footer {
             background-color: #27ae60;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
         footer p {
             margin: 0;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .cta-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+            .features h2, .testimonials h2, .pricing h2, .cta h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -83,18 +131,19 @@
     </header>
 
     <section class="features">
-        <h2>Por que escolher nosso curso?</h2>
+        <section class="video">
+            <h2>Veja como o marketing digital pode transformar negócios</h2>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/V2LxMS-2HRA?si=3wq0rGnCDIBvk0uu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
         <div class="feature-item">
-            <img src="https://via.placeholder.com/600x400" alt="Aprendizado Prático" class="feature-image">
-            <p><strong>Conteúdo Prático:</strong> Aprenda com exemplos do mundo real.</p>
-        </div>
-        <div class="feature-item">
-            <img src="https://via.placeholder.com/600x400" alt="Instrutores Experientes" class="feature-image">
+            <img src="imagens/professor.jpeg" alt="Instrutores Experientes" class="feature-image">
             <p><strong>Instrutores Experientes:</strong> Tenha aulas com profissionais de sucesso.</p>
         </div>
         <div class="feature-item">
-            <img src="https://via.placeholder.com/600x400" alt="Certificado" class="feature-image">
-            <p><strong>Certificação:</strong> Comprove suas habilidades com um certificado reconhecido.</p>
+            <img src="imagens/networkig.jpg" alt="Logo Grupo" class="feature-image">
+            <p><strong>Networking:</strong> Acesso ao grupo exclusivo de Networking no Whatsapp.</p>
         </div>
     </section>
 
@@ -111,14 +160,16 @@
     </section>
 
     <section class="pricing">
-        <h2>Planos e Preços</h2>
-        <p><strong>Plano Básico:</strong> R$ 199,00 - Acesso ao curso completo por 3 meses.</p>
-        <p><strong>Plano Premium:</strong> R$ 299,00 - Acesso vitalício e materiais exclusivos.</p>
+        <h2>Plano e Preço</h2>
+        <p>
+            <span class="original-price">R$ 60,00</span>
+            <span class="discount">R$ 30,00 (50% DE DESCONTO)</span> - Acesso ao curso completo e ao grupo de Networking no Whatsapp.
+        </p>
     </section>
 
     <section class="cta" id="cta">
         <h2>Está pronto para mudar sua vida?</h2>
-        <p>Inscreva-se hoje mesmo e dê o primeiro passo rumo ao sucesso.</p>
+        <p>Inscreva-se hoje mesmo e aproveite nosso desconto especial por tempo limitado.</p>
         <a href="#" class="cta-button">Garanta sua Vaga</a>
     </section>
 
